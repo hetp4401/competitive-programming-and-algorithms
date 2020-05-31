@@ -27,14 +27,29 @@ public class maximalSqaureMatrix {
 }
 
 /*
- * Sample Input 1 6 1 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 1 0 0 1 0 1 0 1 1 0 1 0 1 0
- * 0 1 0 1 0 1
- * 
- * Sample Output 1 1
- * 
- * Sample Input 2 6 0 1 1 1 1 0 1 0 1 1 1 1 0 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1
- * 1 1 0 1 1 1
- * 
- * Sample Output 2 9
- * 
+
+Sample Input 1
+6
+1 0 1 0 1 0
+0 1 0 1 0 1
+1 0 1 0 1 0
+0 1 0 1 0 1
+1 0 1 0 1 0
+0 1 0 1 0 1
+
+Sample Output 1
+1
+
+Sample Input 2
+6
+0 1 1 1 1 0
+1 0 1 1 1 1
+0 1 1 1 1 1
+1 1 0 1 1 1
+1 1 1 1 0 1
+1 1 0 1 1 1
+
+Sample Output 2
+9
+
  */
