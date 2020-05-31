@@ -7,7 +7,7 @@ public class whoIsTallerBFS {
 
     static int n;
     static ArrayList<Integer>[] arr;
-    
+
     public static void main(String[] args) {
 
         Scanner s = new Scanner(System.in);
@@ -79,20 +79,24 @@ The output is one line, containing one of three possible strings:
 yes (if p is taller than q),
 no (if q is taller than p),
 unknown (if there is not enough information to determine the relative heights of p and q).
+
 Sample Input 1
 10 3
 8 4
 3 8
 4 2
 3 2
+
 Sample Output 1
 yes
+
 Sample Input 2
 10 3
 3 8
 2 8
 3 4
 3 2
+
 Sample Output 2
 unknown
 
