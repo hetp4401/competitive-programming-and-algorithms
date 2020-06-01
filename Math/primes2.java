@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class primes2 {
+	
 	public static void main(String[] args) throws NumberFormatException, IOException {
 
 		BufferedReader s = new BufferedReader(new InputStreamReader(System.in));
