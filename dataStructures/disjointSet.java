@@ -3,7 +3,7 @@ package dataStructures;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class gatesDisjointSet {
+public class disjointSet {
 
     public static void main(String[] args) {
 

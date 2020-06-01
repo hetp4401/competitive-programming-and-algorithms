@@ -3,7 +3,7 @@ package graphTheory;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class whoIsTallerBFS {
+public class whoIsTaller {
 
     static int n;
     static ArrayList<Integer>[] arr;

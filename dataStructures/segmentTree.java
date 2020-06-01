@@ -2,7 +2,8 @@ package dataStructures;
 
 import java.util.Scanner;
 
-public class segmentTreeTest {
+public class segmentTree {
+    
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
 
