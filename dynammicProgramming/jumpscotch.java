@@ -24,7 +24,8 @@ public class jumpscotch {
         	while(!deque.isEmpty() && dp[i] < dp[deque.getLast()]) deque.removeLast();
         	deque.addLast(i);
         }
-        System.out.println(dp[n-1]);
+		System.out.println(dp[n-1]);
+		
 	}
 }   
 
