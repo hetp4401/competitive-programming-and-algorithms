@@ -15,16 +15,13 @@ public class bowlingForNumbers {
             int b = s.nextInt();
             int w = s.nextInt();
 
-            int[][] dp = new int[b + 1][p + 1];
-            int[] diff = new int[p + 1];
+            int[][] dp = new int[b+1][p+1];
+            int[] diff = new int[p+1];
 
-            for (int i = 1; i < p + 1; i++)
-                diff[i] = diff[i - 1] + s.nextInt();
+            for (int i = 1; i < p + 1; i++) diff[i] = diff[i - 1] + s.nextInt();
             for (int i = 1; i < b + 1; i++) {
                 for (int j = 1; j < p + 1; j++) {
-                    int m1 = j - w >= 0 ? dp[i - 1][j - w] + diff[j] - diff[j - w] : diff[j];
-                    int m2 = dp[i][j - 1];
-                    dp[i][j] = Math.max(m1, m2);
+                    dp[i][j] = Math.max(j-w >= 0 ? dp[i-1][j-w]+diff[j]-diff[j-w] : diff[j], dp[i][j-1]);
                 }
             }
             System.out.println(dp[b][p]);
