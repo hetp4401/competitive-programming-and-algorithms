@@ -15,8 +15,7 @@ def piday(t, l, n):
                 c += s[(i, l-i, n-1)] if (i, l-i, n-1) in s else piday(i, l-i,n-1)
         s[(t, l, n)] = c
         return c
-    else:
-        return 1
+    return 1
 
 print(piday(k, k, p))
 
