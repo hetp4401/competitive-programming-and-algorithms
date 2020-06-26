@@ -1,4 +1,4 @@
-package dynammicProgramming;
+package strings;
 
 import java.util.Scanner;
 
