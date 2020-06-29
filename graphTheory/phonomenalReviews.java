@@ -18,8 +18,9 @@ public class phonomenalReviews {
 		p = new boolean[n];
 		g = new boolean[n][n];
 
-		for (int i = 0; i < m; i++)
+		for (int i = 0; i < m; i++) {
 			p[s.nextInt()] = true;
+		}
 
 		for (int i = 0; i < n - 1; i++) {
 			int a = s.nextInt();
@@ -29,9 +30,11 @@ public class phonomenalReviews {
 		}
 
 		int start = 0;
-		for (; start < n; start++)
-			if (p[start])
+		for (; start < n; start++) {
+			if (p[start]) {
 				break;
+			}
+		}
 
 		v = new boolean[n];
 		int total = dfs(start) - 1;
@@ -40,27 +43,30 @@ public class phonomenalReviews {
 		dist = new int[n];
 		dfs2(start, 0);
 
-		for (int i = 0; i < n; i++)
+		for (int i = 0; i < n; i++) {
 			start = dist[i] > dist[start] ? i : start;
+		}
 
 		v = new boolean[n];
 		dist = new int[n];
 		dfs2(start, 0);
 
 		int f = 0;
-		for (int i = 0; i < n; i++)
+		for (int i = 0; i < n; i++) {
 			f = Math.max(dist[i], f);
+		}
 
 		System.out.println((total * 2) - f);
-
 	}
 
 	public static int dfs(int c) {
 		int t = 0;
 		v[c] = true;
-		for (int i = 0; i < g.length; i++)
-			if (g[c][i] && !v[i])
+		for (int i = 0; i < g.length; i++) {
+			if (g[c][i] && !v[i]) {
 				t += dfs(i);
+			}
+		}
 		return t + (p[c] || t > 0 ? 1 : 0);
 	}
 
@@ -68,9 +74,12 @@ public class phonomenalReviews {
 		if (p[c])
 			dist[c] = d;
 		v[c] = true;
-		for (int i = 0; i < g.length; i++)
-			if (g[c][i] && !v[i])
+		for (int i = 0; i < g.length; i++) {
+			if (g[c][i] && !v[i]) {
 				dfs2(i, d + 1);
+			}
+		}
+
 	}
 }
 
@@ -125,3 +134,5 @@ Sample Output 2
 Explanation 2
 If Jo begins at restaurant 6, she will only need to use 7 roads. One possible path that she can take is: 6→1→0→2→3→7→3→4. Notice that she doesn't need to visit restaurant 5, since it is not a Pho restaurant. A diagram of the road network is shown below:
 */
+
+
