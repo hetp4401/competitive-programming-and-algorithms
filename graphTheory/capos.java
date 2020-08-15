@@ -4,8 +4,9 @@ package graphTheory;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class capos{
-    static int n;
+public class capos {
+	
+	static int n;
 	static int m;
 	static int[] grudges;
 	static int ans = 15;
@@ -28,17 +29,8 @@ public class capos{
 			grudges[b] |= 1 << (a-1);
 		}
 
-		groups.add(0);
-		for(int i = 1; i < n+1; i++) {
-			int size = groups.size();
-			for(int j = 0; j < size; j++) {
-				if((grudges[i] & groups.get(j)) == 0) {
-					groups.add(groups.get(j) | (1 << (i-1)));
-				}
-			}
-		}
-		
-		dfs(1, 0, 0, new ArrayList<Integer>());
+		groups.add(1);
+		dfs(1);
 		
 		System.out.println(ans);
 		for(int n : track) {
@@ -49,19 +41,25 @@ public class capos{
 			}
 			System.out.println();
 		};
-		
     }
-	public static void dfs(int c, int b, int t, ArrayList<Integer> path) {
-		if (b == (1 << n)-1) {
-			ans = Math.min(t, ans);
-			track = (ArrayList<Integer>) path.clone();
-		}
-		for(int i = c; i < groups.size(); i++) {
-			if((b & groups.get(i)) == 0) {
-				path.add(groups.get(i));
-				dfs(i+1, b | groups.get(i), t+1, path);
-				path.remove(path.size()-1);
+	public static void dfs(int c) {
+		if(c == n+1) {
+			if(groups.size() < ans) {
+				ans = groups.size();
+				track = (ArrayList<Integer>) groups.clone();
 			}
+		}else {
+			for(int i = 0; i < groups.size(); i++) {
+				int t = groups.get(i);
+				if((t & grudges[c]) == 0) {
+					groups.set(i, t | (1 << (c-1)));
+					dfs(c+1);
+					groups.set(i, t);
+				}
+			}
+			groups.add(1 << (c-1));
+			dfs(c+1);
+			groups.remove(groups.size()-1);
 		}
 	}
 }
