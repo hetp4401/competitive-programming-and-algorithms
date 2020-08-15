@@ -2,7 +2,7 @@ package dynammicProgramming;
 
 import java.util.Scanner;
 
-public class aGame {
+public class ioi96 {
 
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);

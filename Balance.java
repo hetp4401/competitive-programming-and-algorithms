@@ -2,7 +2,7 @@ package dynammicProgramming;
 
 import java.util.Scanner;
 
-public class balance {
+public class bowlingfornumbers2 {
 
     public static void main(String[] args) {
 

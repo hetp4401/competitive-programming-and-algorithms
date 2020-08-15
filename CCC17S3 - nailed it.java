@@ -3,7 +3,7 @@ package dataStructures;
 import java.util.Scanner;
 import java.util.HashMap;
 
-public class hashmapbasedproblem {
+public class ccc17j5s3 {
 
     public static void main(String[] args) {
 

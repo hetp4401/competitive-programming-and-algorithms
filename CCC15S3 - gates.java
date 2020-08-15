@@ -3,7 +3,7 @@ package dataStructures;
 import java.util.ArrayList;
 import java.util.Scanner;
 
-public class disjointSet {
+public class ccc15s3 {
 
     public static void main(String[] args) {
 
