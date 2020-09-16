@@ -38,6 +38,7 @@ public class ccc02s4{
 }
 
 
+
 /* 
 You are playing a game of Pick It. You are given a list of positive integers, and you are allowed to 
 select any number other than the first or last number in this list. When you pick a number, that number 
