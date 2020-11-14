@@ -43,15 +43,12 @@ public class ccc02s4 {
 	
 	public static int raisins(int y, int x, int y2, int x2) {
 		if(dp[y][x][y2][x2] != -1) return dp[y][x][y2][x2];
-		
 		int min = Integer.MAX_VALUE;
 		for(int i = y; i < y2; i++) min = Math.min(min, raisins(y, x, i, x2) + raisins(i+1, x, y2, x2));
 		for(int j = x; j < x2; j++) min = Math.min(min, raisins(y, x, y2, j) + raisins(y, j+1, y2, x2));
-		
 		int s1 = y-1 >= 0 ? sums[y-1][x2] : 0;
 		int s2 = x-1 >= 0 ? sums[y2][x-1] : 0;
 		int s3 = y-1 >= 0 && x-1 >= 0 ? sums[y-1][x-1] : 0;
-		
 		return dp[y][x][y2][x2] = min + sums[y2][x2] - s1 - s2 + s3;
 	}	
 }
