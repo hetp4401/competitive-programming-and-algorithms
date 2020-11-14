@@ -115,7 +115,7 @@ public class ccc02s4 {
 
 /* 
 
-For five 2048 board, output the maximum value tile that can be aquired given that no additional tile
+For five 2048 boards, output the maximum value tile that can be aquired given that no additional tile
 is added per move
 
 Sample Input
